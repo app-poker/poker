@@ -1,0 +1,8 @@
+.btn_wrapper{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    right: 30px;
+    bottom: 100px;
+    width: 480px;
+}
