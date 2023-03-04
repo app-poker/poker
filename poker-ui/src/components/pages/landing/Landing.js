@@ -1,8 +1,19 @@
 import landingImg from "../../../image/landing.jpg";
-import Button from "../../button/Button";
+import Button from "../../atoms/button/Button";
 import styles from "./Landing.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
+
+  const navigate = useNavigate();
+
+  const joinHandler = ()=>{
+    navigate("/join")
+  }
+  const startHandler = ()=>{
+    navigate("/start")
+  }
+
   return (
     <>
       <div
@@ -14,16 +25,12 @@ const Landing = () => {
       >
         <div className={styles.btn_wrapper}>
           <Button
-            onClick={() => {
-              alert("Join button clicked");
-            }}
+            onClick={joinHandler}
           >
             JOIN
           </Button>
           <Button
-            onClick={() => {
-                alert("Start button clicked");
-            }}
+            onClick={startHandler}
           >
             START
           </Button>
